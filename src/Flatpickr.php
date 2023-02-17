@@ -29,6 +29,8 @@ class Flatpickr extends Field
 
     protected ?string $dateFormat = 'Y-m-d';
 
+    protected ?array $disabledDates = [];
+
     protected ?string $theme;
 
     /**
@@ -273,5 +275,17 @@ class Flatpickr extends Field
     public function getTheme(): ?string
     {
         return $this->theme;
+    }
+
+    public function disabledDates(array $disabledDates): Flatpickr
+    {
+        $this->disabledDates = $disabledDates;
+
+        return $this;
+    }
+
+    public function getDisabledDates(): ?array
+    {
+        return $this->disabledDates;
     }
 }

@@ -13,7 +13,8 @@ document.addEventListener('alpine:init', () => {
             const config = {
                 mode: attribs.mode,
                 time_24hr: true,
-                altFormat: 'F j, Y',
+                altFormat: attribs.altFormat,
+                disable: attribs.disabledDates,
                 disableMobile: true,
                 initialDate: this.state,
                 allowInvalidPreload: true,
