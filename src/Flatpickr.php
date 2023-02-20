@@ -29,6 +29,8 @@ class Flatpickr extends Field
 
     protected ?string $dateFormat = 'Y-m-d';
 
+    protected ?string $minDate;
+
     protected ?array $disabledDates = [];
 
     protected ?string $theme;
@@ -287,5 +289,17 @@ class Flatpickr extends Field
     public function getDisabledDates(): ?array
     {
         return $this->disabledDates;
+    }
+
+    public function minDate(string $minDate): Flatpickr
+    {
+        $this->minDate = $minDate;
+
+        return $this;
+    }
+
+    public function getMinDate(): ?string
+    {
+        return $this->minDate;
     }
 }

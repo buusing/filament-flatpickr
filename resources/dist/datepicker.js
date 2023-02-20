@@ -16,6 +16,7 @@ document.addEventListener('alpine:init', () => {
                 altFormat: attribs.altFormat,
                 disable: attribs.disabledDates,
                 disableMobile: true,
+                minDate: attribs.minDate,
                 initialDate: this.state,
                 allowInvalidPreload: true,
                 static: false,

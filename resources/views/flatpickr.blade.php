@@ -5,6 +5,7 @@
         "dateFormat" => $getDateFormat(),
     ]);
     $attribs = [
+        "minDate" => $getMinDate(),
         "disabledDates" => $getDisabledDates(),
         "altFormat" => $getAltFormat(),
         "disabled" => $isDisabled(),
