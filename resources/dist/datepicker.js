@@ -8,7 +8,7 @@ document.addEventListener('alpine:init', () => {
             return window.matchMedia('(prefers-color-scheme: dark)').matches;
         },
         init() {
-            console.log(this.state)
+
             this.mode = localStorage.getItem('theme') || (this.darkStatus ? 'dark' : 'light')
             const config = {
                 mode: attribs.mode,
@@ -16,17 +16,12 @@ document.addEventListener('alpine:init', () => {
                 altFormat: attribs.altFormat,
                 disable: attribs.disabledDates,
                 disableMobile: true,
-                minDate: attribs.minDate,
+                minDate: 'today',
                 initialDate: this.state,
                 allowInvalidPreload: true,
                 static: false,
                 defaultDate: this.state,
                 ...packageConfig,
-                plugins: [new confirmDatePlugin({
-                    confirmText: "OK",
-                    showAlways: false,
-                    theme: this.mode
-                })],
             };
             if (attribs.monthSelect) {
                 config.plugins.push(new monthSelectPlugin({

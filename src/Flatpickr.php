@@ -29,7 +29,7 @@ class Flatpickr extends Field
 
     protected ?string $dateFormat = 'Y-m-d';
 
-    protected ?string $minDate;
+    protected ?string $minDate = null;
 
     protected ?array $disabledDates = [];
 

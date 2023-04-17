@@ -5,7 +5,6 @@
         "dateFormat" => $getDateFormat(),
     ]);
     $attribs = [
-        "minDate" => $getMinDate(),
         "disabledDates" => $getDisabledDates(),
         "altFormat" => $getAltFormat(),
         "disabled" => $isDisabled(),
@@ -30,7 +29,7 @@
     :required="$isRequired()"
     :state-path="$getStatePath()"
 >
-    <div wire:ignore x-data="datepicker(@entangle($getStatePath()),@js($config), @js($attribs))">
+    <div wire:ignore x-data="datepicker(@entangle($getStatePath()), @js($config), @js($attribs))">
         <template x-if="attribs.theme!=='default'">
             <link x-else rel="stylesheet" type="text/css" :href="`https://npmcdn.com/flatpickr/dist/themes/${attribs.theme}.css`">
         </template>
