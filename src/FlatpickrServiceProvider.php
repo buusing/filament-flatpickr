@@ -23,6 +23,12 @@ class FlatpickrServiceProvider extends PluginServiceProvider
     ];
 
     protected array $scripts = [
+        'flatpickr-core' => __DIR__.'/../public/dist/flatpickr.min.js',
+        'flatpickr-range-plugin' => __DIR__.'/../public/dist/plugins/rangePlugin.js',
+        'flatpickr-month-select' => __DIR__.'/../public/dist/plugins/monthSelect/index.js',
+        'flatpickr-week-select' => __DIR__.'/../public/dist/plugins/weekSelect/weekSelect.js',
+        'flatpickr-confirm-date' => __DIR__.'/../public/dist/plugins/confirmDate/confirmDate.js',
+        'filament-flatpickr' => __DIR__.'/../resources/dist/datepicker.js',
     ];
 
     public function configurePackage(Package $package): void
